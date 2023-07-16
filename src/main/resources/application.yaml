@@ -1,0 +1,25 @@
+spring:
+ application:
+  name: product-service
+ profiles:
+  active: localhost
+ main:
+  allow-bean-definition-overriding: true
+
+---
+spring:
+ profiles: localhost
+ cloud: 
+  config:
+   uri: http://localhost:8888
+ jpa:
+  hibernate:
+   ddl-auto: update
+  database-platform: org.hibernate.dialect.PostgreSqlDialect
+  properties:
+   hibernate: 
+    default_schema: stock_managment
+ datasource:
+  url: "jdbc:postgresql://localhost:5432/stock_managment"
+  username: postgres
+  password: 1234
