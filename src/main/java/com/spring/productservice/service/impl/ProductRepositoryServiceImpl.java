@@ -2,6 +2,8 @@ package com.spring.productservice.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import com.spring.productservice.enums.Language;
@@ -19,7 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class ProductRepositoryImpl implements IProductRepositoryService {
+public class ProductRepositoryServiceImpl implements IProductRepositoryService {
 
     private final ProductRepository productRepository;
 
